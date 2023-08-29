@@ -48,8 +48,8 @@ export const Timer = () => {
     <div className="md:h-[calc(100vh-68px)] flex flex-col justify-center items-center">
       <div className="flex flex-col items-center space-y-6 text-white w-full">
         <TimerDisplay seconds={seconds} calculateCircleProgress={calculateCircleProgress} formatTime={formatTime} />
-        <TimerControls isActive={isActive} setIsActive={setIsActive} stopTimer={stopTimer} />
         <TimerPresets setSeconds={setSeconds} setMaxSeconds={setMaxSeconds} />
+        <TimerControls isActive={isActive} setIsActive={setIsActive} stopTimer={stopTimer} />
         <SoundSelector setSelectedSounds={setSelectedSounds} timerIsActive={isActive} />
       </div>
     </div>
@@ -68,6 +68,20 @@ const TimerDisplay = ({ seconds, calculateCircleProgress, formatTime }) => (
   </div>
 );
 
+const TimerPresets = ({ setSeconds, setMaxSeconds }) => (
+  <div className="flex space-x-2">
+    {TIME_PRESETS.map(preset => (
+      <button
+        key={preset.value}
+        onClick={() => { setSeconds(preset.value); setMaxSeconds(preset.value); }}
+        className="text-xs md:text-sm hover:bg-white hover:text-rose-500 dark:hover:text-slate-700 border-2 text-white px-3 lg:px-4 py-2 uppercase rounded tracking-wider cursor-pointer"
+      >
+        {preset.label}
+      </button>
+    ))}
+  </div>
+);
+
 const TimerControls = ({ isActive, setIsActive, stopTimer }) => (
   <div className="flex space-x-4">
     <button
@@ -82,20 +96,6 @@ const TimerControls = ({ isActive, setIsActive, stopTimer }) => (
     >
       Stop
     </button>
-  </div>
-);
-
-const TimerPresets = ({ setSeconds, setMaxSeconds }) => (
-  <div className="flex space-x-2">
-    {TIME_PRESETS.map(preset => (
-      <button
-        key={preset.value}
-        onClick={() => { setSeconds(preset.value); setMaxSeconds(preset.value); }}
-        className="text-xs md:text-sm hover:bg-white hover:text-rose-500 dark:hover:text-slate-700 border-2 text-white px-3 lg:px-4 py-2 uppercase rounded tracking-wider cursor-pointer"
-      >
-        {preset.label}
-      </button>
-    ))}
   </div>
 );
 
