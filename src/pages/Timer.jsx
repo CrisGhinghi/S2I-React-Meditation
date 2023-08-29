@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BsFillPlayFill, BsPauseFill, BsFillStopFill } from 'react-icons/bs';
 import { SoundSelector } from '../components/SoundSelector';
 import PropTypes from 'prop-types';
 
@@ -49,7 +50,8 @@ export const Timer = () => {
       <div className="flex flex-col items-center space-y-6 text-white w-full">
         <TimerDisplay seconds={seconds} calculateCircleProgress={calculateCircleProgress} formatTime={formatTime} />
         <TimerPresets setSeconds={setSeconds} setMaxSeconds={setMaxSeconds} />
-        <TimerControls isActive={isActive} setIsActive={setIsActive} stopTimer={stopTimer} />
+        <TimerControls isActive={isActive} setIsActive={setIsActive} stopTimer={stopTimer} seconds={seconds} />
+        <h2 className="text-center mx-auto">Create your perfect soundtrack, you can select multiple tracks at a time.</h2>
         <SoundSelector setSelectedSounds={setSelectedSounds} timerIsActive={isActive} />
       </div>
     </div>
@@ -82,19 +84,27 @@ const TimerPresets = ({ setSeconds, setMaxSeconds }) => (
   </div>
 );
 
-const TimerControls = ({ isActive, setIsActive, stopTimer }) => (
+const TimerControls = ({ isActive, setIsActive, stopTimer, seconds }) => (
   <div className="flex space-x-4">
     <button
-      onClick={() => setIsActive(!isActive)}
-      className="hover:bg-gradient-to-r hover:from-teal-600 hover:to-emerald-500 border-2 text-white px-4 py-2 uppercase rounded tracking-wider cursor-pointer"
+      onClick={() => {
+        if (!isActive && seconds === 0) {
+          alert("Please, select a preset time before starting.");
+        } else {
+          setIsActive(!isActive);
+        }
+      }}
+      className="hover:bg-gradient-to-r hover:from-teal-600 hover:to-emerald-500 border-2 text-white px-4 py-2 uppercase rounded tracking-wider cursor-pointer flex items-center space-x-2"
     >
-      {isActive ? 'Pause' : 'Start'}
+      {isActive ? <BsPauseFill /> : <BsFillPlayFill />}
+      <span>{isActive ? 'Pause' : 'Start'}</span>
     </button>
     <button
       onClick={stopTimer}
-      className="hover:bg-gradient-to-r hover:from-rose-800 hover:to-rose-600 border-2 text-white px-4 py-2 uppercase rounded tracking-wider cursor-pointer"
+      className="hover:bg-gradient-to-r hover:from-rose-800 hover:to-rose-600 border-2 text-white px-4 py-2 uppercase rounded tracking-wider cursor-pointer flex items-center space-x-2"
     >
-      Stop
+      <BsFillStopFill />
+      <span>Stop</span>
     </button>
   </div>
 );
@@ -109,6 +119,7 @@ TimerControls.propTypes = {
   isActive: PropTypes.bool.isRequired,
   setIsActive: PropTypes.func.isRequired,
   stopTimer: PropTypes.func.isRequired,
+  seconds: PropTypes.number.isRequired,
 };
 
 TimerPresets.propTypes = {
