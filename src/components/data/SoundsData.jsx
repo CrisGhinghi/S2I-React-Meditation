@@ -6,16 +6,16 @@ import { GiJungle } from 'react-icons/gi';
 import { BiSolidPiano } from 'react-icons/bi';
 import { IoIosWater } from 'react-icons/io';
 
-import bowl from '../../assets/sounds/bowl.mp3';
-import campfire from '../../assets/sounds/campfire.wav';
-import chirping from '../../assets/sounds/chirping.wav';
-import water from '../../assets/sounds/water.wav';
-import rain from '../../assets/sounds/rain.mp3';
-import jungle from '../../assets/sounds/jungle.wav';
-import pier from '../../assets/sounds/pier.wav';
-import piano from '../../assets/sounds/piano.wav';
-import storm from '../../assets/sounds/storm.wav';
-import waves from '../../assets/sounds/waves.flac';
+import bowl from '../../assets/sounds/bowl.MP3';
+import campfire from '../../assets/sounds/campfire.MP3';
+import chirping from '../../assets/sounds/chirping.MP3';
+import water from '../../assets/sounds/water.MP3';
+import rain from '../../assets/sounds/rain.MP3';
+import jungle from '../../assets/sounds/jungle.MP3';
+import pier from '../../assets/sounds/pier.MP3';
+import piano from '../../assets/sounds/piano.MP3';
+import storm from '../../assets/sounds/storm.MP3';
+import waves from '../../assets/sounds/waves.MP3';
 
 export const sounds = [
     {
