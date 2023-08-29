@@ -91,7 +91,7 @@ const TimerPresets = ({ setSeconds, setMaxSeconds }) => (
       <button
         key={preset.value}
         onClick={() => { setSeconds(preset.value); setMaxSeconds(preset.value); }}
-        className="text-sm md:text-base hover:bg-white hover:text-rose-500 dark:hover:text-slate-700 border-2 text-white px-4 py-2 uppercase rounded tracking-wider cursor-pointer"
+        className="text-xs md:text-sm hover:bg-white hover:text-rose-500 dark:hover:text-slate-700 border-2 text-white px-3 lg:px-4 py-2 uppercase rounded tracking-wider cursor-pointer"
       >
         {preset.label}
       </button>
