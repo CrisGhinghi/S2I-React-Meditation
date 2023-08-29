@@ -12,9 +12,9 @@ export const Header = ({ darkMode, setDarkMode }) => {
         <header className='bg-rose-700 dark:bg-gray-950 text-white'>
             <nav className='flex justify-between items-center p-5'>
                 <div className='flex items-center'>
-                    <img src={logo} alt="logo" className='mr-1 h-12 w-12 align-middle mb-4' />
+                    <img src={logo} alt="logo" className='mr-2 h-10 lg:h-14 w-10 lg:w-14 align-middle mb-2' />
                     <Link to="/"> {/* Aggiunto il componente Link */}
-                        <h1 className='text-3xl align-middle cursor-pointer font-letgo'>Let go</h1>
+                        <h1 className='text-3xl lg:text-4xl align-middle cursor-pointer font-letgo'>Let go</h1>
                     </Link>
                 </div>
                 <button
