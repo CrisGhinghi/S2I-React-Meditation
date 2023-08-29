@@ -10,10 +10,10 @@ export const Home = () => {
     }
 
     return (
-        <section className="h-[calc(100vh-88px)] lg:h-[calc(100vh-104px)] flex flex-col md:flex-row justify-center items-center lg:pb-20 text-center lg:text-left">
+        <section className="h-[calc(100vh-88px)] lg:h-[calc(100vh-104px)] flex flex-col md:flex-row items-center lg:pb-20 text-center lg:text-left">
 
             {/* text and button */}
-            <div className="md:order-2 flex items-center md:w-1/2">
+            <div className="md:order-2 flex justify-center items-center md:w-1/2">
                 <div className="text-center md:text-left w-full">
                     <h2 className="text-6xl md:text-8xl font-letgo">
                         Let go
@@ -30,7 +30,7 @@ export const Home = () => {
             </div>
 
             {/* img */}
-            <div className="flex md:justify-center md:w-1/2">
+            <div className="flex justify-center md:w-1/2">
                 <img
                     src={meditation}
                     alt="avatar"
