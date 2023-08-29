@@ -13,7 +13,7 @@ export const Home = () => {
         <section className="h-[calc(100vh-88px)] lg:h-[calc(100vh-104px)] flex flex-col md:flex-row justify-center items-center pb-8 lg:pb-20 text-center lg:text-left">
 
             {/* text and button */}
-            <div className="md:order-2 flex-grow flex justify-center items-center md:w-1/2">
+            <div className="md:order-2 flex justify-center items-center md:w-1/2">
                 <div className="text-center md:text-left w-full">
                     <h2 className="text-6xl md:text-8xl font-letgo">
                         Let go
@@ -34,7 +34,7 @@ export const Home = () => {
                 <img
                     src={meditation}
                     alt="avatar"
-                    className="max-w-full h-full md:max-h-[80vh]"
+                    className="md:max-h-[80vh]"
                 />
             </div>
 
