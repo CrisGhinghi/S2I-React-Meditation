@@ -15,7 +15,7 @@ export const Home = () => {
             {/* text and button */}
             <div className="md:order-2 flex-grow flex justify-center items-center md:w-1/2">
                 <div className="text-center md:text-left w-full">
-                    <h2 className="mt-8 text-6xl md:text-8xl font-letgo">
+                    <h2 className="text-6xl md:text-8xl font-letgo">
                         Let go
                     </h2>
                     <h3 className="text-lg md:text-2xl font-extralight">
