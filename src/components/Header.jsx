@@ -9,7 +9,7 @@ export const Header = ({ darkMode, setDarkMode }) => {
     };
 
     return (
-        <header className='bg-rose-700 dark:bg-gray-950 text-white'>
+        <header>
             <nav className='flex justify-between items-center p-5'>
                 <div className='flex items-center'>
                     <img src={logo} alt="logo" className='mr-2 h-10 lg:h-14 w-10 lg:w-14 align-middle mb-2' />
