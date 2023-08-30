@@ -1,9 +1,9 @@
 
 export const Footer = () => {
     return (
-      <section className="text-center py-4">
+      <section className="text-center py-4 text-slate-700 text-xs">
           <p className="">
-              © 2023 CRIS. All rights reserved.
+              Created by Cristina Ghinghiloschi © 2023
           </p>
       </section>
     )
