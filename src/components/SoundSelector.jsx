@@ -29,7 +29,7 @@ export const SoundSelector = ({ setSelectedSounds, timerIsActive }) => {
     useEffect(() => {
         setSelectedSounds(selectedSounds);
     }, [selectedSounds, setSelectedSounds]);
-
+    
     return (
         <div className="flex flex-col justify-center items-center w-full pb-6">
             <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-10 w-4/5">
