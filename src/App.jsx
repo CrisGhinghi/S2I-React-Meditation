@@ -8,7 +8,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div className={`${darkMode ? 'dark' : ''} overflow-y-hidden`}>
       <Router>
         <div className="h-screen">
           <Header darkMode={darkMode} setDarkMode={setDarkMode} />
