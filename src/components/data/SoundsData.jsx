@@ -1,16 +1,15 @@
 import { FaFire, FaWater, FaBell } from 'react-icons/fa';
 import { PiBirdFill } from 'react-icons/pi';
 import { IoThunderstormSharp } from 'react-icons/io5';
-import { BsFillCloudRainHeavyFill } from 'react-icons/bs';
 import { GiJungle } from 'react-icons/gi';
 import { BiSolidPiano } from 'react-icons/bi';
 import { IoIosWater } from 'react-icons/io';
+import { SiLighthouse } from 'react-icons/si';
 
 import bowl from '../../assets/sounds/bowl.MP3';
 import campfire from '../../assets/sounds/campfire.MP3';
 import chirping from '../../assets/sounds/chirping.MP3';
 import water from '../../assets/sounds/water.MP3';
-import rain from '../../assets/sounds/rain.MP3';
 import jungle from '../../assets/sounds/jungle.MP3';
 import pier from '../../assets/sounds/pier.MP3';
 import piano from '../../assets/sounds/piano.MP3';
@@ -39,18 +38,13 @@ export const sounds = [
         src: water
     },
     {
-        name: 'Rain',
-        icon: <BsFillCloudRainHeavyFill size={24} />,
-        src: rain
-    },
-    {
         name: 'Jungle',
         icon: <GiJungle size={24} />,
         src: jungle
     },
     {
         name: 'Pier',
-        icon: <FaWater size={24} />,
+        icon: <SiLighthouse size={24} />,
         src: pier
     },
     {
@@ -65,7 +59,7 @@ export const sounds = [
     },
     {
         name: 'Waves',
-        icon: <FaBell size={24} />,
+        icon: <FaWater size={24} />,
         src: waves
     },
 ];
