@@ -1,24 +1,11 @@
-import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
 import { Timer } from "./pages/Timer";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.pathname === "/") {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-
-    return () => {
-      document.body.classList.remove('no-scroll');
-    };
-  }, [location.pathname]);
 
   return (
     <div className={darkMode ? 'dark' : ''}>
