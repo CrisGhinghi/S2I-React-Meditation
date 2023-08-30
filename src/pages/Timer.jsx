@@ -46,7 +46,7 @@ export const Timer = () => {
   };
 
   return (
-    <div className="md:h-[calc(100vh-68px)] flex flex-col justify-center items-center">
+    <div className="md:h-[calc(100vh-152px)] flex flex-col justify-center items-center">
       <div className="flex flex-col items-center space-y-6 text-white w-full">
         <TimerDisplay seconds={seconds} calculateCircleProgress={calculateCircleProgress} formatTime={formatTime} />
         <TimerPresets setSeconds={setSeconds} setMaxSeconds={setMaxSeconds} />
