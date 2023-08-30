@@ -9,3 +9,8 @@
     font-family: 'Montserrat', sans-serif;
   }
 }
+
+.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
