@@ -10,7 +10,7 @@ export const Home = () => {
     }
 
     return (
-        <section className="h-[calc(100vh-88px)] lg:h-[calc(100vh-104px)] block md:flex flex-col md:flex-row items-center lg:pb-20 text-center lg:text-left">
+        <section className="h-[calc(100vh-88px)] lg:h-[calc(100vh-104px)] flex flex-col md:flex-row items-center lg:pb-20 text-center lg:text-left">
 
             {/* text and button */}
             <div className="md:order-2 flex justify-center items-center md:w-1/2">
