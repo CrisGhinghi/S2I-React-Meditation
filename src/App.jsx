@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
 import { Timer } from "./pages/Timer";
+import { Footer } from "./components/Footer";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,6 +18,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/timer" element={<Timer />} />
             </Routes>
+            <Footer />
           </main>
         </div>
       </Router>
